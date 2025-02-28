@@ -1,0 +1,10 @@
+DELETE FROM PrestacionServicio;
+DELETE FROM OrdenServicio;
+DELETE FROM IPS_Medico;
+DELETE FROM IPS_TipoServicio;
+DELETE FROM Beneficiario;
+DELETE FROM Afiliado;
+DELETE FROM Medico;
+DELETE FROM IPS;
+DELETE FROM TipoServicio;
+DELETE FROM EPS;
