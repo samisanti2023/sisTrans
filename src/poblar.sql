@@ -1,11 +1,7 @@
---EPS
-INSERT INTO EPS (id, nombre) VALUES ('EPS001', 'SaludTotal');
-INSERT INTO EPS (id, nombre) VALUES ('EPS002', 'Sanitas');
-
 
 --IPS
-INSERT INTO IPS (nit, nombre, direccion, telefono, id_eps) VALUES ('NIT001', 'Clínica del Norte', 'Calle 123 #45-67', 1234567, 'EPS001');
-INSERT INTO IPS (nit, nombre, direccion, telefono, id_eps) VALUES ('NIT002', 'Hospital Central', 'Avenida 89 #12-34', 7654321, 'EPS002');
+INSERT INTO IPS (nit, nombre, direccion, telefono) VALUES ('NIT001', 'Clínica del Norte', 'Calle 123 #45-67', 1234567);
+INSERT INTO IPS (nit, nombre, direccion, telefono) VALUES ('NIT002', 'Hospital Central', 'Avenida 89 #12-34', 7654321);
 
 --tipo servicio
 INSERT INTO TipoServicio (id,nombre) VALUES (1,'Consulta General');
@@ -17,14 +13,14 @@ INSERT INTO IPS_TipoServicio (id_ips, id_servicio) VALUES ('NIT001', 1);
 INSERT INTO IPS_TipoServicio (id_ips, id_servicio) VALUES ('NIT002', 2);
 
 --afiliado
-INSERT INTO Afiliado (numero_documento, nombre, tipo_documento, tipo_afiliado, id_eps) 
-VALUES ('CC1001', 'Juan Pérez', 'CEDULA', 'CONTRIBUYENTE', 'EPS001');
+INSERT INTO Afiliado (numero_documento, nombre, tipo_documento, tipo_afiliado) 
+VALUES ('CC1001', 'Juan Pérez', 'CEDULA', 'CONTRIBUYENTE');
 
-INSERT INTO Afiliado (numero_documento, nombre, tipo_documento, tipo_afiliado, id_eps) 
-VALUES ('CC1002', 'Ana Gómez', 'CEDULA', 'BENEFICIARIO', 'EPS002');
+INSERT INTO Afiliado (numero_documento, nombre, tipo_documento, tipo_afiliado) 
+VALUES ('CC1002', 'Ana Gómez', 'CEDULA', 'BENEFICIARIO');
 
-INSERT INTO Afiliado (numero_documento, nombre, tipo_documento, tipo_afiliado, id_eps) 
-VALUES ('CC1003', 'Juana Gómez', 'CEDULA', 'BENEFICIARIO', 'EPS002');
+INSERT INTO Afiliado (numero_documento, nombre, tipo_documento, tipo_afiliado) 
+VALUES ('CC1003', 'Juana Gómez', 'CEDULA', 'BENEFICIARIO');
 --beneficiario
 INSERT INTO Beneficiario (numero_documento, parentesco, contribuyente_asociado) 
 VALUES ('CC1002', 'Hija', 'CC1001');

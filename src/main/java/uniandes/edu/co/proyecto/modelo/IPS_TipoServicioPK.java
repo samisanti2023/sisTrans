@@ -2,8 +2,6 @@ package uniandes.edu.co.proyecto.modelo;
 
 import java.io.Serializable;
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 @Embeddable
 public class IPS_TipoServicioPK implements Serializable {
     private String id_ips; // Solo almacena el NIT de la IPS

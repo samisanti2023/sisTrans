@@ -5,8 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import uniandes.edu.co.proyecto.modelo.IPS;
-import uniandes.edu.co.proyecto.modelo.TipoServicio;
 import uniandes.edu.co.proyecto.modelo.IPS_TipoServicio;
 import uniandes.edu.co.proyecto.modelo.IPS_TipoServicioPK;
 import uniandes.edu.co.proyecto.repositorio.IPSRepository;

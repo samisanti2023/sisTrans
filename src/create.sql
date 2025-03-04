@@ -1,17 +1,9 @@
--- Tabla EPS
-CREATE TABLE EPS (
-    id VARCHAR2(50) PRIMARY KEY,
-    nombre VARCHAR2(100) NOT NULL
-);
-
 -- Tabla IPS
 CREATE TABLE IPS (
     nit VARCHAR2(50) PRIMARY KEY,
     nombre VARCHAR2(100) NOT NULL,
     direccion VARCHAR2(255),
-    telefono NUMBER NOT NULL,
-    id_eps VARCHAR2(50) NOT NULL,
-    FOREIGN KEY (id_eps) REFERENCES EPS(id)
+    telefono NUMBER NOT NULL
 );
 
 -- Tabla TipoServicio (Única Enumeración Necesaria)
@@ -34,9 +26,7 @@ CREATE TABLE Afiliado (
     numero_documento VARCHAR2(50) PRIMARY KEY,
     nombre VARCHAR2(100) NOT NULL,
     tipo_documento VARCHAR2(20) NOT NULL CHECK (tipo_documento IN ('CEDULA', 'TARJETA_IDENTIDAD', 'REGISTRO_CIVIL', 'PASAPORTE')),
-    tipo_afiliado VARCHAR2(50) NOT NULL CHECK (tipo_afiliado IN ('CONTRIBUYENTE', 'BENEFICIARIO')),
-    id_eps VARCHAR2(50),
-    FOREIGN KEY (id_eps) REFERENCES EPS(id)
+    tipo_afiliado VARCHAR2(50) NOT NULL CHECK (tipo_afiliado IN ('CONTRIBUYENTE', 'BENEFICIARIO'))
 );
 
 -- Tabla Beneficiario (Herencia de Afiliado)

@@ -1,11 +1,6 @@
 package uniandes.edu.co.proyecto.modelo;
-
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
 
 @Entity
@@ -20,18 +15,14 @@ public class IPS {
     
     private Long telefono;
     
-    @ManyToOne
-    @JoinColumn(name = "id_eps", nullable = false)
-    private EPS eps;
     
     public IPS() {;}
     
-    public IPS(String nit, String nombre, String direccion, Long telefono, EPS eps) {
+    public IPS(String nit, String nombre, String direccion, Long telefono) {
         this.nit = nit;
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.eps = eps;
     }
     
     public String getNit() {
@@ -66,17 +57,9 @@ public class IPS {
         this.telefono = telefono;
     }
     
-    public EPS getEps() {
-        return eps;
-    }
-    
-    public void setEps(EPS eps) {
-        this.eps = eps;
-    }
-    
     @Override
     public String toString() {
-        return this.nit + "|" + this.nombre + "|" + this.direccion + "|" + this.telefono + "|" + this.eps.getId();
+        return this.nit + "|" + this.nombre + "|" + this.direccion + "|" + this.telefono ;
     }
 }
 
